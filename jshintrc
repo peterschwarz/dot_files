@@ -1,0 +1,32 @@
+{
+    "camelcase": false,
+    "undef": true,
+    "unused": true,
+    "globals": {
+        "document": false,
+        "console": false,
+        "localStorage": false,
+        "require": false,
+        "angular": false,
+        "_": false,
+        "$": false,
+        "alertify": false,
+        "Mousetrap": false,
+        "Q": true,
+        "Offline": false,
+        "describe": false,
+        "beforeEach": false,
+        "beforeAll": false,
+        "afterEach": false,
+        "afterAll": false,
+        "inject": false,
+        "it": false,
+        "pending": false,
+        "expect": false,
+        "module": false,
+        "jasmine": false,
+        "spyOn": false,
+        "browser": false,
+        "By": false
+    }
+}
