@@ -3,6 +3,7 @@
         email = peter.schwarz@bicycle.io
 [core]
        	autocrlf = input
+	excludesfile = /Users/pschwarz/.gitignore
 [diff]
        	algorithm = patience
 [push]
