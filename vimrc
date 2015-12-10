@@ -1,6 +1,8 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+set clipboard=unnamed
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -23,13 +25,18 @@ Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-fireplace'
 Plugin 'guns/vim-clojure-highlight'
 Plugin 'tpope/vim-surround'
-Plugin 'venantius/vim-eastwood'
+"Plugin 'venantius/vim-eastwood'
 Plugin 'venantius/vim-cljfmt'
+
+" Misc syntax plugins
+Plugin 'keith/swift.vim'
+Plugin 'b4winckler/vim-objc'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " General config
+set backspace=indent,eol,start
 syntax on
 set background=dark
 let g:solarized_termcolors=256
@@ -46,12 +53,13 @@ let g:syntastic_python_checkers = ['pep8']
 
 " NERDTree config
 map <C-n> :NERDTreeToggle<CR>
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', 'node_modules', 'target', 'out']
 
 " ctrl-p config
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 set wildignore+=*/target/*
-let g:ctrlp_custom_ignore = '\v(([\/]\.(git|hg|svn|))|(node_modules))$'
+set wildignore+=*/out/*
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|out\|target\|git\|hg'
 
 " vim-airline
 function! AirlineInit()

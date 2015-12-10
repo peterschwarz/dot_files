@@ -8,6 +8,7 @@ alias qlp="qlmanage -p"
 # local gem installs
 alias gemi="gem install --user-install"
 alias gemu="gem update --user-install"
+alias gemr="gem uninstall --user-install"
 
 # Development
 alias cdp="cd ~/Development/projects"
