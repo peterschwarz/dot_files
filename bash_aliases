@@ -16,3 +16,7 @@ alias cdp="cd ~/Development/projects"
 alias figwheel="rlwrap lein figwheel"
 
 alias ptest="python -m unittest discover"
+
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+
+alias clj="rlwrap java -Djava.net.preferIPv4Stack=true -jar ~/.m2/repository/org/clojure/clojure/1.7.0/clojure-1.7.0.jar"
