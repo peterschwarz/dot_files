@@ -25,7 +25,6 @@ Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-fireplace'
 Plugin 'guns/vim-clojure-highlight'
 Plugin 'tpope/vim-surround'
-"Plugin 'venantius/vim-eastwood'
 Plugin 'venantius/vim-cljfmt'
 
 " Misc syntax plugins
@@ -62,6 +61,7 @@ set wildignore+=*/out/*
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|out\|target\|git\|hg'
 
 " vim-airline
+set laststatus=2 " Enables vim-airline on all buffers
 function! AirlineInit()
     let g:airline_section_b = airline#section#create(['branch'])
     let g:airline_section_c = '%<%t%m'
@@ -93,3 +93,6 @@ au Filetype clojure nmap <c-c><c-t> :call TestToplevel()<cr>
 
 " vim-cljfmt config
 let g:clj_fmt_autosave = 0
+
+" JavaScript and Json
+au BufNewFile,BufReadPost .jshintrc set filetype=json
