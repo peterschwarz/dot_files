@@ -52,13 +52,11 @@ let g:syntastic_python_checkers = ['pep8']
 
 " NERDTree config
 map <C-n> :NERDTreeToggle<CR>
-let NERDTreeIgnore = ['\.pyc$', 'node_modules', 'target', 'out']
+let NERDTreeIgnore = ['\.pyc$', '^node_modules$', '^target$', '^out$']
 
 " ctrl-p config
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
-set wildignore+=*/target/*
-set wildignore+=*/out/*
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|out\|target\|git\|hg'
+set wildignore+=*/target/*,*/out/*,*/.git/*,*/.hg/*,*/node_modules/*
 
 " vim-airline
 set laststatus=2 " Enables vim-airline on all buffers
