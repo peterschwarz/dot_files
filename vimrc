@@ -26,6 +26,7 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'guns/vim-clojure-highlight'
 Plugin 'tpope/vim-surround'
 Plugin 'venantius/vim-cljfmt'
+Plugin 'tpope/vim-repeat'
 
 " Misc syntax plugins
 Plugin 'keith/swift.vim'
@@ -88,6 +89,7 @@ function! TestToplevel() abort
     return result
 endfunction
 au Filetype clojure nmap <c-c><c-t> :call TestToplevel()<cr>
+au Filetype clojure autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " vim-cljfmt config
 let g:clj_fmt_autosave = 0

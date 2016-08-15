@@ -9,3 +9,5 @@ if which ruby >/dev/null && which gem >/dev/null; then
 fi
 
 REACT_EDITOR=vi
+
+HOMEBREW_NO_ANALYTICS=1
