@@ -43,7 +43,7 @@ let g:solarized_termcolors=256
 colorscheme solarized
 
 set number
-set tabstop=4 shiftwidth=4 expandtab
+set tabstop=8 shiftwidth=4 expandtab
 
 " Syntastic
 set statusline+=%#warningmsg#
