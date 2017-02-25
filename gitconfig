@@ -4,6 +4,7 @@
 [core]
        	autocrlf = input
 	excludesfile = /Users/pschwarz/.gitignore
+	editor = vim
 [diff]
        	algorithm = patience
 [push]

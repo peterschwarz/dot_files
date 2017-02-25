@@ -29,3 +29,9 @@ alias ptest="python -m unittest discover"
 
 
 # alias clj="rlwrap java -Djava.net.preferIPv4Stack=true -jar ~/.m2/repository/org/clojure/clojure/1.7.0/clojure-1.7.0.jar"
+
+# fun
+alias kexp="mpg123 http://50.31.180.202:80/ 2>/dev/null $1 > /dev/null"
+alias thecurrent="mpg123 http://current.stream.publicradio.org/kcmp.mp3 2>/dev/null $1 > /dev/null"
+alias classical="mpg123 http://cms.stream.publicradio.org/cms.mp3 2>/dev/null $1 > /dev/null"
+alias stopstream="killall -HUP mpg123"

@@ -15,6 +15,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-commentary'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'
@@ -28,9 +29,15 @@ Plugin 'tpope/vim-surround'
 Plugin 'venantius/vim-cljfmt'
 Plugin 'tpope/vim-repeat'
 
+" Javascript
+Plugin 'isRuslan/vim-es6'
+
+" Rust Plugins
+Plugin 'rust-lang/rust.vim'
+
 " Misc syntax plugins
-Plugin 'keith/swift.vim'
-Plugin 'b4winckler/vim-objc'
+" Plugin 'keith/swift.vim'
+" Plugin 'b4winckler/vim-objc'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -50,14 +57,15 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_python_checkers = ['pep8']
+let g:syntastic_javascript_checkers = ['eslint']
 
 " NERDTree config
 map <C-n> :NERDTreeToggle<CR>
-let NERDTreeIgnore = ['\.pyc$', '^node_modules$', '^target$', '^out$']
+let NERDTreeIgnore = ['\.pyc$', '^__pycache__$', '^node_modules$', '^target$', '^out$', '^build$']
 
 " ctrl-p config
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
-set wildignore+=*/target/*,*/out/*,*/.git/*,*/.hg/*,*/node_modules/*
+set wildignore+=*/target/*,*/out/*,*/build/*,*/.git/*,*/.hg/*,*/node_modules/*
 
 " vim-airline
 set laststatus=2 " Enables vim-airline on all buffers
@@ -96,3 +104,6 @@ let g:clj_fmt_autosave = 0
 
 " JavaScript and Json
 au BufNewFile,BufReadPost .jshintrc set filetype=json
+
+set exrc
+set secure

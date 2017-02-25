@@ -11,3 +11,7 @@ fi
 REACT_EDITOR=vi
 
 HOMEBREW_NO_ANALYTICS=1
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh

@@ -2,3 +2,7 @@
 *.sw?
 *.pyc
 npm-debug.log
+
+# editor configs
+.vimrc
+.idea
