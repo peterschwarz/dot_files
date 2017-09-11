@@ -16,3 +16,6 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[alias]
+[alias]
+	slog = log --pretty=format:\"%h - %an, %ar : %s\"

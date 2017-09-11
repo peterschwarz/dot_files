@@ -25,7 +25,14 @@ alias cdp="cd ~/Development/projects"
 
 alias figwheel="rlwrap lein figwheel"
 
+nrepl () {
+    LEIN_REPL_PORT=$1 lein repl;
+}
+
 alias ptest="python -m unittest discover"
+
+# JavasciptCore
+alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
 
 
 # alias clj="rlwrap java -Djava.net.preferIPv4Stack=true -jar ~/.m2/repository/org/clojure/clojure/1.7.0/clojure-1.7.0.jar"

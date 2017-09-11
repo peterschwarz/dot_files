@@ -2,6 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 set clipboard=unnamed
+set colorcolumn=81
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -56,8 +57,14 @@ set tabstop=8 shiftwidth=4 expandtab
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+let g:syntastic_check_on_open = 1
 let g:syntastic_python_checkers = ['pep8']
 let g:syntastic_javascript_checkers = ['eslint']
+
+" let g:syntastic_rust_rustc_exe = 'cargo check'
+" let g:syntastic_rust_rustc_fname = ''
+" let g:syntastic_rust_rustc_args = '--'
+" let g:syntastic_rust_checkers = ['rustc']
 
 " NERDTree config
 map <C-n> :NERDTreeToggle<CR>
@@ -104,6 +111,14 @@ let g:clj_fmt_autosave = 0
 
 " JavaScript and Json
 au BufNewFile,BufReadPost .jshintrc set filetype=json
+au BufNewFile,BufRead *js setlocal tabstop=2
+au BufNewFile,BufRead *js setlocal shiftwidth=2
+au BufNewFile,BufRead *js setlocal softtabstop=2
+
+" Line-formatted files:
+au BufRead,BufNewFile *md setlocal textwidth=80
+au BufRead,BufNewFile *rst setlocal textwidth=80
 
 set exrc
 set secure
+set spell

@@ -18,7 +18,14 @@ if [ -f '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/co
     source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
 fi
 
+# Git completion
+if [ -f ~/.git-completion.bash ]; then
+    . ~/.git-completion.bash
+fi
+
 fixbluetooth(){
     sudo kextunload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport
     sudo kextload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport
 }
+
+export PATH="$HOME/.cargo/bin:$PATH"
