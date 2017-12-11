@@ -36,6 +36,9 @@ Plugin 'isRuslan/vim-es6'
 " Rust Plugins
 Plugin 'rust-lang/rust.vim'
 
+" Common Lisp
+Plugin 'l04m33/vlime', {'rtp': 'vim/'}
+
 " Misc syntax plugins
 " Plugin 'keith/swift.vim'
 " Plugin 'b4winckler/vim-objc'

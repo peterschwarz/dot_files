@@ -23,6 +23,11 @@ if [ -f ~/.git-completion.bash ]; then
     . ~/.git-completion.bash
 fi
 
+# ASDF
+if [ -f /usr/local/opt/asdf/asdf.sh ]; then
+    source /usr/local/opt/asdf/asdf.sh
+fi
+
 fixbluetooth(){
     sudo kextunload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport
     sudo kextload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport
