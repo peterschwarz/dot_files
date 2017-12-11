@@ -42,3 +42,12 @@ alias kexp="mpg123 http://50.31.180.202:80/ 2>/dev/null $1 > /dev/null"
 alias thecurrent="mpg123 http://current.stream.publicradio.org/kcmp.mp3 2>/dev/null $1 > /dev/null"
 alias classical="mpg123 http://cms.stream.publicradio.org/cms.mp3 2>/dev/null $1 > /dev/null"
 alias stopstream="killall -HUP mpg123"
+
+srcsearch () {
+    find $1 -type f -name "$2" \
+        -not -path ".*/build/*" \
+        -not -path ".*/target/*" \
+        -not -path ".*/node_modules/*" \
+        -not -path ".*/protobuf/*" \
+        | xargs grep -n "$3"
+}
