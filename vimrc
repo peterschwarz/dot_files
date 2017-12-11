@@ -39,6 +39,9 @@ Plugin 'rust-lang/rust.vim'
 " Common Lisp
 Plugin 'l04m33/vlime', {'rtp': 'vim/'}
 
+" Go Plugins
+Plugin 'fatih/vim-go'
+
 " Misc syntax plugins
 " Plugin 'keith/swift.vim'
 " Plugin 'b4winckler/vim-objc'
@@ -61,13 +64,10 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_check_on_open = 1
-let g:syntastic_python_checkers = ['pep8']
+let g:syntastic_python_checkers = ['pep8', 'flake8']
+let g:syntastic_python_flake8_exec = 'python3 pyflakes'
 let g:syntastic_javascript_checkers = ['eslint']
-
-" let g:syntastic_rust_rustc_exe = 'cargo check'
-" let g:syntastic_rust_rustc_fname = ''
-" let g:syntastic_rust_rustc_args = '--'
-" let g:syntastic_rust_checkers = ['rustc']
+let g:syntastic_rust_checkers = ['cargo']
 
 " NERDTree config
 map <C-n> :NERDTreeToggle<CR>
