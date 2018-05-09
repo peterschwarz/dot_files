@@ -45,9 +45,9 @@ alias stopstream="killall -HUP mpg123"
 
 srcsearch () {
     find $1 -type f -name "$2" \
-        -not -path ".*/build/*" \
-        -not -path ".*/target/*" \
-        -not -path ".*/node_modules/*" \
-        -not -path ".*/protobuf/*" \
+        -not -path "*/build/*" \
+        -not -path "*/target/*" \
+        -not -path "*/node_modules/*" \
+        -not -path "*/protobuf/*" \
         | xargs grep -n "$3"
 }
