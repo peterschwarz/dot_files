@@ -51,3 +51,11 @@ srcsearch () {
         -not -path "*/protobuf/*" \
         | xargs grep -n "$3"
 }
+
+mknote () {
+    name=$1
+    if [[ -z "$name" ]]; then
+        name=note
+    fi
+    touch "$name-$(date -u +"%Y-%m-%dT%H-%M-%SZ").md"
+}
