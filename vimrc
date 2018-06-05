@@ -1,8 +1,11 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+set mouse=a
 set clipboard=unnamed
 set colorcolumn=81
+scriptencoding utf-8
+set encoding=utf-8
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -40,7 +43,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'l04m33/vlime', {'rtp': 'vim/'}
 
 " Go Plugins
-Plugin 'fatih/vim-go'
+" Plugin 'fatih/vim-go'
 
 " Misc syntax plugins
 " Plugin 'keith/swift.vim'
@@ -63,9 +66,9 @@ set tabstop=8 shiftwidth=4 expandtab
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_check_on_open = 1
-let g:syntastic_python_checkers = ['pep8', 'flake8']
-let g:syntastic_python_flake8_exec = 'python3 pyflakes'
+let g:syntastic_check_on_open = 0
+let g:syntastic_python_checkers = ['pycodestyle', 'flake8']
+let g:syntastic_python_flake8_exec = '/usr/local/bin/python3 -m pyflakes'
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_rust_checkers = ['cargo']
 
@@ -118,10 +121,13 @@ au BufNewFile,BufRead *js setlocal tabstop=2
 au BufNewFile,BufRead *js setlocal shiftwidth=2
 au BufNewFile,BufRead *js setlocal softtabstop=2
 
+" Rust files
+au BufNewFile,BufReadPost .rs set colorcolumn=101
+
 " Line-formatted files:
 au BufRead,BufNewFile *md setlocal textwidth=80
 au BufRead,BufNewFile *rst setlocal textwidth=80
 
 set exrc
 set secure
-set spell
+set spell spelllang=en_us
