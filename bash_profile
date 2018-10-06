@@ -6,6 +6,10 @@ if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
 
+if [ -f ~/.local_aliases ]; then
+    source ~/.local_aliases
+fi
+
 if [ -f ~/.secure_variables ]; then
     source ~/.secure_variables
 fi
