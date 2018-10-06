@@ -118,6 +118,9 @@ au BufNewFile,BufRead *js setlocal tabstop=2
 au BufNewFile,BufRead *js setlocal shiftwidth=2
 au BufNewFile,BufRead *js setlocal softtabstop=2
 
+" Common lisp files
+au BufNewFile,BufReadPost *.asd set filetype=lisp
+
 " Line-formatted files:
 au BufRead,BufNewFile *md setlocal textwidth=80
 au BufRead,BufNewFile *rst setlocal textwidth=80
