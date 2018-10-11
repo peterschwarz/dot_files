@@ -124,6 +124,9 @@ au BufNewFile,BufRead *js setlocal softtabstop=2
 " Rust files
 au BufNewFile,BufReadPost .rs set colorcolumn=101
 
+" Common lisp files
+au BufNewFile,BufReadPost *.asd set filetype=lisp
+
 " Line-formatted files:
 au BufRead,BufNewFile *md setlocal textwidth=80
 au BufRead,BufNewFile *rst setlocal textwidth=80
