@@ -7,9 +7,4 @@
              [venantius/ultra "0.4.1"]]
    :dependencies [[com.cemerick/pomegranate "0.3.1"]]
    :ultra {:color-scheme :solarized_dark}
-   :repl-options {:port 0
-                  :init (do
-                          (require 'cljfmt.core)
-                          (defn current-classpath []
-                            (->> (ClassLoader/getSystemClassLoader) (.getURLs) seq (map #(.getFile %))))
-                          )}}}
+   :repl-options {:port 0}}}
