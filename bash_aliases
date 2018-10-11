@@ -46,6 +46,7 @@ alias stopstream="killall -HUP mpg123"
 srcsearch () {
     find $1 -type f -name "$2" \
         -not -path "*/build/*" \
+        -not -path "*/.git/*" \
         -not -path "*/target/*" \
         -not -path "*/node_modules/*" \
         -not -path "*/protobuf/*" \
