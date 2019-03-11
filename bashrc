@@ -8,7 +8,7 @@ PATH=$APPENGINE_SDK/bin:$PATH
 PATH=$JAVA_HOME/bin:$PATH
 
 if which ruby >/dev/null && which gem >/dev/null; then
-    PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+    PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
 
 REACT_EDITOR=vi
