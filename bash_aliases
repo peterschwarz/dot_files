@@ -34,9 +34,6 @@ alias ptest="python -m unittest discover"
 # JavasciptCore
 alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
 
-
-# alias clj="rlwrap java -Djava.net.preferIPv4Stack=true -jar ~/.m2/repository/org/clojure/clojure/1.7.0/clojure-1.7.0.jar"
-
 # fun
 alias kexp="mpg123 http://50.31.180.202:80/ 2>/dev/null $1 > /dev/null"
 alias thecurrent="mpg123 http://current.stream.publicradio.org/kcmp.mp3 2>/dev/null $1 > /dev/null"
