@@ -12,7 +12,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'bling/vim-airline'
-Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
@@ -63,16 +62,6 @@ colorscheme solarized
 set number
 set tabstop=8 shiftwidth=4 expandtab
 
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_check_on_open = 0
-let g:syntastic_python_checkers = ['pycodestyle', 'flake8']
-let g:syntastic_python_flake8_exec = '/usr/local/bin/python3 -m pyflakes'
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_rust_checkers = ['cargo']
-
 " NERDTree config
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.pyc$', '^__pycache__$', '^node_modules$', '^target$', '^out$', '^build$']
@@ -86,7 +75,6 @@ set laststatus=2 " Enables vim-airline on all buffers
 function! AirlineInit()
     let g:airline_section_b = airline#section#create(['branch'])
     let g:airline_section_c = '%<%t%m'
-    let g:airline_section_warning = airline#section#create(['syntastic'])
 endfunction
 autocmd VimEnter * if exists(':AirlineToggle') | call AirlineInit()
 
