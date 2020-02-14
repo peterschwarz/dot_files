@@ -1,6 +1,6 @@
 [user]
         name = Peter Schwarz
-        email = peter.schwarz@bicycle.io
+	email = pschwarz@bitwise.io
 [core]
        	autocrlf = input
 	excludesfile = /Users/pschwarz/.gitignore

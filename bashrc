@@ -1,9 +1,9 @@
-JAVA_HOME=`/usr/libexec/java_home -v 10`
+JAVA_HOME=`/usr/libexec/java_home -v 11`
 ANDROID_HOME=~/Library/Android/sdk
 export APPENGINE_SDK=/usr/local/appengine-java-sdk
 
 PATH=~/bin:/usr/local/bin:$PATH
-PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
+# PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 PATH=$APPENGINE_SDK/bin:$PATH
 PATH=$JAVA_HOME/bin:$PATH
 

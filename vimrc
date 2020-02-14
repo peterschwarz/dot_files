@@ -1,9 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-set mouse=a
-set clipboard=unnamed
-set colorcolumn=81
 scriptencoding utf-8
 set encoding=utf-8
 
@@ -55,6 +52,10 @@ filetype plugin indent on    " required
 " General config
 set backspace=indent,eol,start
 syntax on
+set lazyredraw
+set mouse=a
+set clipboard=unnamed
+set colorcolumn=81
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
@@ -117,12 +118,11 @@ let g:clj_fmt_autosave = 0
 
 " JavaScript and Json
 au BufNewFile,BufReadPost .jshintrc set filetype=json
-au BufNewFile,BufRead *js setlocal tabstop=2
-au BufNewFile,BufRead *js setlocal shiftwidth=2
-au BufNewFile,BufRead *js setlocal softtabstop=2
+au Filetype javascript setlocal ts=2 sw=2 sts=2
 
 " Rust files
-au BufNewFile,BufReadPost .rs set colorcolumn=101
+au Filetype rust setlocal colorcolumn=101
+let g:rustfmt_options = "--edition 2018"
 
 " Common lisp files
 au BufNewFile,BufReadPost *.asd set filetype=lisp

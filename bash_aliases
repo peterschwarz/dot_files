@@ -24,6 +24,7 @@ alias gemr="gem uninstall --user-install"
 alias cdp="cd ~/Development/projects"
 
 alias figwheel="rlwrap lein figwheel"
+alias rebl="clojure -A:rebl"
 
 nrepl () {
     LEIN_REPL_PORT=$1 lein repl;
@@ -52,6 +53,10 @@ srcsearch () {
         -not -path "*/node_modules/*" \
         -not -path "*/protobuf/*" \
         | xargs grep -n "$3"
+}
+
+rssearch () {
+    srcsearch "$1" "*.rs" "$2"
 }
 
 mknote () {
