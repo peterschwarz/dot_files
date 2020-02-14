@@ -13,23 +13,23 @@ env:
   # `infocmp xterm-256color`.
   TERM: xterm-256color
 
-window:
+# window:
   # Window dimensions in character columns and lines
   # (changes require restart)
-  dimensions:
-    columns: 80
-    lines: 24
+  # dimensions:
+  #   columns: 80
+  #   lines: 50
 
   # Adds this many blank pixels of padding around the window
   # Units are physical pixels; this is not DPI aware.
   # (change requires restart)
-  padding:
-    x: 2
-    y: 2
+  # padding:
+  #   x: 2
+  #   y: 2
 
   # Window decorations
   # Setting this to false will result in window without borders and title bar.
-  decorations: true
+  # decorations: full
 
 # Display tabs using this many cells (changes require restart)
 tabspaces: 8
@@ -77,9 +77,6 @@ font:
   # for retina displays, but for non-retina you probably want this set to
   # false.
   use_thin_strokes: true
-
-# Should display the render timer
-render_timer: false
 
 # # Colors (Tomorrow Night Bright)
 # colors:
