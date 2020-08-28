@@ -12,6 +12,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'bling/vim-airline'
+Plugin 'dense-analysis/ale'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
@@ -110,7 +111,8 @@ au Filetype javascript setlocal ts=2 sw=2 sts=2
 
 " Rust files
 au Filetype rust setlocal colorcolumn=101
-let g:rustfmt_options = "--edition 2018"
+let g:ale_linters = { 'rust': [ 'rls' ], 'javascript': [ 'eslint' ] }
+let g:ale_rust_rls_toolchain = 'stable'
 
 " Common lisp files
 au BufNewFile,BufReadPost *.asd set filetype=lisp
