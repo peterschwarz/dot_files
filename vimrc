@@ -112,6 +112,9 @@ let g:clj_fmt_autosave = 0
 " JavaScript and Json
 au BufNewFile,BufReadPost .jshintrc set filetype=json
 au Filetype javascript setlocal ts=2 sw=2 sts=2
+au Filetype css setlocal ts=2 sw=2 sts=2
+au Filetype sass setlocal ts=2 sw=2 sts=2
+au Filetype scss setlocal ts=2 sw=2 sts=2
 
 " Rust files
 au Filetype rust setlocal colorcolumn=101
