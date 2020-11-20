@@ -35,6 +35,10 @@ nrepl () {
 
 alias ptest="python -m unittest discover"
 
+if hash bat 2>/dev/null
+then
+    alias cat=bat
+fi
 
 # alias clj="rlwrap java -Djava.net.preferIPv4Stack=true -jar ~/.m2/repository/org/clojure/clojure/1.7.0/clojure-1.7.0.jar"
 
