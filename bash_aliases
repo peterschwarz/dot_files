@@ -12,6 +12,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
     # use the homebrew version
     alias vi=/usr/local/bin/vim
+
+    # JavasciptCore
+    alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc"
 fi
 
 # local gem installs
@@ -31,9 +34,6 @@ nrepl () {
 }
 
 alias ptest="python -m unittest discover"
-
-# JavasciptCore
-alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
 
 
 # alias clj="rlwrap java -Djava.net.preferIPv4Stack=true -jar ~/.m2/repository/org/clojure/clojure/1.7.0/clojure-1.7.0.jar"
