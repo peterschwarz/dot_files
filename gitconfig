@@ -18,4 +18,4 @@
 	required = true
 [alias]
 [alias]
-	slog = log --pretty=format:\"%h - %an, %ar : %s\"
+	slog = log --pretty=format:\"%h - %an, %ar : %s\" --simplify-merges --no-merges
