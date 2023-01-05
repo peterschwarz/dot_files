@@ -20,15 +20,16 @@ Plugin 'tpope/vim-commentary'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'cespare/vim-toml'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 
 " Clojure plugins
 Plugin 'vim-scripts/paredit.vim'
 Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-fireplace'
 Plugin 'guns/vim-clojure-highlight'
-Plugin 'tpope/vim-surround'
 Plugin 'venantius/vim-cljfmt'
-Plugin 'tpope/vim-repeat'
 
 " Javascript
 Plugin 'isRuslan/vim-es6'
@@ -118,8 +119,9 @@ au Filetype scss setlocal ts=2 sw=2 sts=2
 
 " Rust files
 au Filetype rust setlocal colorcolumn=101
-let g:ale_linters = { 'rust': [ 'rls' ], 'javascript': [ 'eslint' ] }
+let g:ale_linters = { 'rust': [ 'analyzer' ], 'javascript': [ 'eslint' ] }
 let g:ale_rust_rls_toolchain = 'stable'
+let g:ale_rust_analyzer_config  = { 'cargo': { 'features': ['experimental'] } }
 
 " Common lisp files
 au BufNewFile,BufReadPost *.asd set filetype=lisp
