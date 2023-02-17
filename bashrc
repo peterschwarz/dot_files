@@ -1,18 +1,37 @@
-JAVA_HOME=`/usr/libexec/java_home -v 11`
+export PATH=~/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 
-PATH=~/bin:$PATH
-PATH=/usr/local/bin:$PATH
-PATH=/usr/local/opt/grep/libexec/gnubin:$PATH
-PATH=$JAVA_HOME/bin:$PATH
-
-if which ruby >/dev/null && which gem >/dev/null; then
-    PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
-fi
+export JAVA_HOME=$(brew --prefix openjdk)
 
 REACT_EDITOR=vi
 
 HOMEBREW_NO_ANALYTICS=1
 
-VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+    export WORKON_HOME=$HOME/.virtualenvs
+    source /usr/local/bin/virtualenvwrapper.sh
+fi
+
+if [ -f ~/.bash_aliases ]; then
+    source ~/.bash_aliases
+fi
+
+if [ -f ~/.local_aliases ]; then
+    source ~/.local_aliases
+fi
+
+if [ -f ~/.secure_variables ]; then
+    source ~/.secure_variables
+fi
+
+# Git completion
+if [ -f ~/.git-completion.bash ]; then
+    . ~/.git-completion.bash
+fi
+
+. "$HOME/.cargo/env"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# For running splinter tests
+ulimit -S -n 20480
