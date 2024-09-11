@@ -120,8 +120,10 @@ au Filetype scss setlocal ts=2 sw=2 sts=2
 " Rust files
 au Filetype rust setlocal colorcolumn=101
 let g:ale_linters = { 'rust': [ 'analyzer' ], 'javascript': [ 'eslint' ] }
-let g:ale_rust_rls_toolchain = 'stable'
-let g:ale_rust_analyzer_config  = { 'cargo': { 'features': ['experimental'] } }
+let g:ale_fixers = { 'rust': [ 'rustfmt' ] }
+let g:ale_completion_enabled = 1
+" Fix autocomplete
+set completeopt=menu,menuone,preview,noselect,noinsert
 
 " Common lisp files
 au BufNewFile,BufReadPost *.asd set filetype=lisp
